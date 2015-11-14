@@ -1,0 +1,33 @@
+package easybudda.examples.fuelcalculator;
+ 
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+ 
+public class FuelCalculator {
+    private JTextField wayField;
+    private JLabel wayLabel;
+    private JLabel kmLabel;
+    private JTextField averageField;
+    private JLabel averageLabel;
+    private JLabel litersLabel;
+    private JTextField priceField;
+    private JLabel priceLabel;
+    private JLabel rurLabel;
+    private JButton calcButton;
+    private JLabel resultLabel;
+    private JFrame mainFrame;
+    
+    FuelCalculator() {
+        wayLabel = new JLabel("Расстояние");
+        wayField = new JTextField("0");
+        wayField.setHorizontalAlignment(JTextField.RIGHT);
+        kmLabel = new JLabel("Км");
+        averageLabel = new JLabel("Средний расход топлива на 100 км");
+        averageField = new JTextField("0");
+        averageField.setHorizontalAlignment(JTextField.RIGHT);
+        litersLabel = new JLabel("Л");
+        priceLabel = new JLabel("Цена за литр топлива");
+        priceField = new JTextField("0");
+        priceField.setHorizontalAlignment(JTextField.RIGHT);
+        rurLabel = new JLabel("Руб");
