@@ -95,3 +95,35 @@ calcButton = new JButton("Рассчитать");
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.anchor = GridBagConstraints.WEST;
         layout.setConstraints(resultLabel, constraints);
+
+       mainFrame = new JFrame("Расход топлива");
+        mainFrame.setSize(650, 500);
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.setLayout(layout);
+        
+        mainFrame.add(wayLabel);
+        mainFrame.add(averageLabel);
+        mainFrame.add(priceLabel);
+        mainFrame.add(wayField);
+        mainFrame.add(averageField);
+        mainFrame.add(priceField);
+        mainFrame.add(kmLabel);
+        mainFrame.add(litersLabel);
+        mainFrame.add(rurLabel);
+        mainFrame.add(calcButton);
+        mainFrame.add(resultLabel);
+        
+        mainFrame.pack();
+        mainFrame.setVisible(true);
+    }
+    
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new FuelCalculator();
+            }
+        });
+    }
+ 
+}
